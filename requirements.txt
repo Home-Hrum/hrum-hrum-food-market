@@ -1,2 +1,5 @@
-flask
-
+flask~=2.1.2
+pip~=22.0.4
+keyring~=18.0.1
+setuptools~=61.3.0
+python-dotenv~=0.20.0
