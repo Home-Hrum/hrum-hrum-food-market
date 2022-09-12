@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: indigo;
+}
+
+.nav__logo_box {
+    position: relative;
+    background: coral;
+    width: 80px;
+    height: 70px;
+    border-radius: 10% 10%;
+}
+
+.nav__button_grp {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__button {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.nav__button span {
+    color: white;
+    font-size: 13px;
+}
+
+.nav__button span:hover {
+    color: bisque;
+}
+
+.wrapper__banner {
+    display: flex;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    justify-content: start;
+}
+
+.banner__info {
+    margin-left: 90px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner__info h1 {
+    color: bisque;
+    font-family: 'Montserrat', serif;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.banner__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_subinfo span {
+    color: white;
+    font-size: 17px;
+}
+
+.wrapper__categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background: white;
+}
+
+.wrapper__categories span {
+    padding: 20px 10px;
+    color: black;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.wrapper__categories span:hover {
+    color: coral;
+}
+
+@media (max-width: 1024px) {
+    .wrapper__banner {
+        justify-content: center;
+    }
+
+    .banner__info {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        margin-left: 0;
+    }
+
+    .banner__info h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 512px) {
+    .wrapper__nav {
+        height: 50px;
+    }
+
+    .nav__logo_box {
+        width: 60px;
+        height: 65px;
+    }
+
+    .banner__info h1 {
+        font-size: 30px;
+    }
+
+    .banner_subinfo span {
+        font-size: 13px;
+    }
+}
+
+
+
