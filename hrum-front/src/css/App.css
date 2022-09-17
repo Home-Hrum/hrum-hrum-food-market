@@ -5,13 +5,31 @@
 
 .App {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-.card-title {
-    font-size: 32px;
+.bin-wrapper {
+    position: relative;
 }
 
+.bin-indicator-active {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: #F77A4E;
+    border-radius: 100%;
+}
+
+.bin-indicator-disable {
+    display: none;
+}
+
+.card-title {
+
+}
 
 .card-img {
     border-radius: 0 0 0 0;
@@ -30,10 +48,6 @@
 
 .btn-primary:active {
     background: #FF936C !important;
-}
-
-img {
-    border-radius: 1%;
 }
 
 @media (max-width: 1024px) {

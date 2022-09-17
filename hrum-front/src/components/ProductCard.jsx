@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Card} from "react-bootstrap";
 import "../css/App.css"
 
-const ProductCard = ({name, weight, price, photo}) => {
+const ProductCard = ({id, name, weight, price, photo, callback}) => {
     return (
         <div>
             <Card className="rounded box mb-4">
@@ -10,7 +10,7 @@ const ProductCard = ({name, weight, price, photo}) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{`${weight} г.`}</Card.Text>
-                    <Button className="w-100" variant="primary">{`${price} ₽`}</Button>
+                    <Button onClick={() => callback(id)} className="w-100" variant="primary">{`${price} ₽`}</Button>
                 </Card.Body>
             </Card>
         </div>

@@ -20,7 +20,7 @@ const GridCardSystem = ({ colCount, children, xs, sm, md, lg}) => {
 
         for (let row = 0; row < rowCount; ++row) {
             rows.push(
-                <Row>
+                <Row key={row}>
                     {
                         renderCols()
                     }
@@ -37,7 +37,7 @@ const GridCardSystem = ({ colCount, children, xs, sm, md, lg}) => {
         for (let col = 0; col < colCount; ++col) {
             if(index < children.length) {
                 cols.push(
-                    <Col xs={xs} sm={sm} md={md} lg={lg}>
+                    <Col key={col} xs={xs} sm={sm} md={md} lg={lg}>
                         {children[index]}
                     </Col>
                 )
