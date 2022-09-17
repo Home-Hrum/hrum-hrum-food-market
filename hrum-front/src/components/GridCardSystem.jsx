@@ -2,15 +2,12 @@ import React from 'react';
 import {
     Row,
     Col,
-    Container
 } from 'react-bootstrap'
 
 
-const GridSystem = ({ colCount, children, md }) => {
+const GridCardSystem = ({ colCount, children, xs, sm, md, lg}) => {
     let rowCount = Math.floor(children.length / colCount) + 1
     let index = 0
-
-    console.log(children)
 
     const buildGrid = () => {
         return (
@@ -21,9 +18,9 @@ const GridSystem = ({ colCount, children, md }) => {
     const renderRows = () => {
         let rows = []
 
-        for(let row = 0; row < rowCount; row++) {
+        for (let row = 0; row < rowCount; ++row) {
             rows.push(
-                <Row className='Row'>
+                <Row>
                     {
                         renderCols()
                     }
@@ -40,7 +37,7 @@ const GridSystem = ({ colCount, children, md }) => {
         for (let col = 0; col < colCount; ++col) {
             if(index < children.length) {
                 cols.push(
-                    <Col className='Col' md={md}>
+                    <Col xs={xs} sm={sm} md={md} lg={lg}>
                         {children[index]}
                     </Col>
                 )
@@ -52,12 +49,12 @@ const GridSystem = ({ colCount, children, md }) => {
     }
 
     return (
-        <Container fluid="md">
+        <div className="w-75 mx-auto grid">
             {
                 buildGrid()
             }
-        </Container>
+        </div>
     );
 };
 
-export default GridSystem;
+export default GridCardSystem;

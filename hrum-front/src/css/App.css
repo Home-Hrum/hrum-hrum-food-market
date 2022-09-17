@@ -8,6 +8,15 @@
     width: 100%;
 }
 
+.card-title {
+    font-size: 32px;
+}
+
+
+.card-img {
+    border-radius: 0 0 0 0;
+}
+
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #F77A4E !important;
     border: 1px solid #F06F41 !important;
@@ -21,6 +30,10 @@
 
 .btn-primary:active {
     background: #FF936C !important;
+}
+
+img {
+    border-radius: 1%;
 }
 
 @media (max-width: 1024px) {

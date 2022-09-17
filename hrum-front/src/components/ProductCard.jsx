@@ -2,11 +2,11 @@ import React from 'react';
 import {Button, Card} from "react-bootstrap";
 import "../css/App.css"
 
-const ProductCard = ({name, weight, price}) => {
+const ProductCard = ({name, weight, price, photo}) => {
     return (
         <div>
             <Card className="rounded box mb-4">
-                <Card.Img src={require('../img/1.png')} alt={"Picture of " + name + " doesn't load."} />
+                <Card.Img src={photo} alt={`Picture of ${name} doesn't load.`} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{`${weight} г.`}</Card.Text>
